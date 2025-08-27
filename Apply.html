@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+    <header>
+        <h1>Welcome To The Gaming Industry</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about us.html">About us</a>
+            <a href="Game courses.html">Game courses</a> 
+            <a href="Story.html">Story</a>
+            <a href="Apply.html">Apply</a>
+        </nav>
+    </header>
+
+   <section>
+        <h2>Let the Games Begin</h2>
+        <form>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="course">Select Course:</label><br>
+            <select id="course" name="course" required>
+                <option value="">--Please choose an option--</option>
+                <option value="intro">Introduction to Game Development</option>
+                <option value="advanced">Advanced Game Programming</option>
+                <option value="art">Game Art and Animation</option>
+                <option value="vr">Virtual Reality Development</option>
+                <option value="mobile">Mobile Game Development</option>
+            </select><br><br>
+
+            <label for="experience">Prior Experience (if any):</label><br>
+            <textarea id="experience" name="experience" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Submit Application">
+        </form>
+   </section>
