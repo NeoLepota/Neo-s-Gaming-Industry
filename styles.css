@@ -1,0 +1,254 @@
+/* NAVIGATION BAR STYLING */
+nav {
+  background-color: #000; /* black background */
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav a {
+  background-color: #b30000; /* deep red */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ff1a1a; /* brighter red on hover */
+}
+
+
+.hero {
+  background-color: #000;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #ff1a1a;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: #b30000;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #ff1a1a;
+}
+
+.section {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.section h2 {
+  color: #ff1a1a;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.course-list, .game-type-list {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+}
+
+.course-list ul, .game-type-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.course-list li, .game-type-list li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.course-list h2, .game-type-list h2 {
+  color: #ff1a1a;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.course-list, .game-type-list {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+}
+
+.course-list ul, .game-type-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.course-list li, .game-type-list li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.course-list h2, .game-type-list h2 {
+  color: #ff1a1a;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+form {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #222;
+  color: white;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: #b30000;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ff1a1a;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer a {
+  color: #ff1a1a;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav {
+  padding: 10px 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 16px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.hero a {
+  display: inline-block;
+  background-color: #b30000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.hero a:hover {
+  background-color: #ff1a1a;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #ff1a1a;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  nav {
+    justify-content: flex-end;
+  }
+
+  nav a {
+    margin: 0 10px;
+    width: auto;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+
+
+
+
