@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+    <header>
+        <h1>Welcome To The Gaming Industry</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about us.html">About us</a>
+            <a href="Game courses.html">Game courses</a> 
+            <a href="Story.html">Story</a>
+            <a href="Apply.html">Apply</a>
+            <a href="location.html">Location</a>
+        </nav>
+    </header>
+
+<section>
+  <h2>Let the Games Begin</h2>
+
+  <form id="signupForm">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="course">Select Course:</label><br>
+    <select id="course" name="course" required>
+      <option value="">--Please choose an option--</option>
+      <option value="intro">Introduction to Game Development</option>
+      <option value="advanced">Advanced Game Programming</option>
+      <option value="art">Game Art and Animation</option>
+      <option value="vr">Virtual Reality Development</option>
+      <option value="mobile">Mobile Game Development</option>
+    </select><br><br>
+
+    <label for="experience">Prior Experience (if any):</label><br>
+    <textarea id="experience" name="experience" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Submit Application">
+  </form>
+
+  <!-- ✅ Confirmation message box -->
+  <div id="enquiryResponse" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  border: 2px solid red;
+  z-index: 9999;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 0 20px red;
+  font-size: 18px;
+">
+</div>
+
+
+  <!-- ✅ Scripts placed correctly -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("signupForm");
+      const responseBox = document.getElementById("enquiryResponse");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const course = document.getElementById("course").value;
+        const experience = document.getElementById("experience").value.trim();
+
+        let errors = [];
+
+        if (name.length < 3) {
+          errors.push("Please enter a valid name.");
+        }
+
+        if (!email.includes("@") || !email.includes(".")) {
+          errors.push("Please enter a valid email address.");
+        }
+
+        if (!course) {
+          errors.push("Please select a course.");
+        }
+
+        if (errors.length > 0) {
+          alert(errors.join("\n"));
+          return;
+        }
+
+        responseBox.innerHTML = `
+          <h3>Application Submitted!</h3>
+          <p>Thank you, <strong>${name}</strong>, for applying to the <strong>${course}</strong> course.</p>
+          <p>We have sent a confirmation email to <strong>${email}</strong>.</p>
+          <p>We will review your application and get back to you shortly.</p>
+        `;
+        responseBox.style.display = "block";
+        form.reset();
+      });
+    });
+  </script>
+</section>
+   

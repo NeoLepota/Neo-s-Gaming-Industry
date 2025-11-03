@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Location - Gaming Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Leaflet CSS -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+
+  <style>
+    #map {
+      height: 500px;
+      width: 80%;
+      margin: 20px auto;
+      border: 2px solid red;
+      box-shadow: 0 0 10px red;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gaming Academy</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about us.html">About us</a>
+      <a href="Game courses.html">Game courses</a>
+      <a href="Story.html">Story</a>
+      <a href="Apply.html">Apply</a>
+      <a href="location.html">Location</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>📍 Find Our Campus</h2>
+    <p>
+      Our main headquarters are located in the heart of Brakpan, Gauteng —
+      a growing hub for gaming and technology.
+    </p>
+
+    <div id="map"></div>
+
+    <h3>Contact Details</h3>
+    <p>Address: 123 Game Dev Street, Brakpan, Gauteng, South Africa</p>
+    <p>Phone: 011 345 6546</p>
+  </section>
+
+  <!-- Leaflet JS -->
+  <!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   src="map-init.js"></script>
+  
+></script>
+
+<!-- Your map script -->
+<script src="map-init.js"></script>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const map = L.map("map").setView([-26.2353, 28.37], 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker([-26.2353, 28.37])
+      .addTo(map)
+      .bindPopup("Gaming Academy HQ<br>Brakpan, Gauteng")
+      .openPopup();
+  });
+</script>
+
+  <footer>
+    <p>Follow us on:</p>
+    <a href="https://www.instagram.com/gamingindustry780/#" target="_blank">Instagram</a> |
+    <a href="http://www.youtube.com/@GamingIndustry-q4n" target="_blank">YouTube</a> |
+    <a href="https://x.com/GamingInd82513" target="_blank">X</a>
+    <p>&copy; 2024 Gaming Industry. All rights reserved.</p>
+  </footer>
+
+  <div class="cta-section">
+  <a href="Apply.html" class="btn">Apply Now</a>
+</div>
+
+  
+</body>
+</html>

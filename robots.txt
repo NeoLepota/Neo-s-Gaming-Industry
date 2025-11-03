@@ -1,0 +1,6 @@
+# robots.txt
+User-agent: *
+Allow: /
+
+# Deny access to temporary or sensitive folders if they existed (e.g., admin)
+# Disallow: /admin/
